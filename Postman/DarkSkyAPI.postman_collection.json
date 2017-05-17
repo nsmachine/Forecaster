@@ -1,0 +1,21 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DarkSkyAPI",
+		"_postman_id": "87f86849-6329-67e9-963d-a0fbb8589b1a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.darksky.net/forecast/{{api-secret}}/37.8267,-122.4233",
+			"request": {
+				"url": "https://api.darksky.net/forecast/{{api-secret}}/37.8267,-122.4233",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Dark Sky API\nGet weather for latitude, longitude"
+			},
+			"response": []
+		}
+	]
+}

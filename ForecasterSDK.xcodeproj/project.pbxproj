@@ -1,0 +1,944 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DBEED6ECFA6A2E5AAA6945B /* Pods_ForecasterSDKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A2FBF6EB0D352DBD1C080F /* Pods_ForecasterSDKTests.framework */; };
+		46F5A4AEC8F6B1EAE50DE2B6 /* Pods_ForecasterSDKTestsHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54D6B4C07E19CB185FF31B1 /* Pods_ForecasterSDKTestsHost.framework */; };
+		B12FD29A1ED22C390091421F /* ForecasterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */; };
+		B12FD29B1ED22C390091421F /* ForecasterSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B12FD2A01ED22E480091421F /* DarkSkyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD29F1ED22E480091421F /* DarkSkyModel.swift */; };
+		B12FD2A21ED24FF40091421F /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD2A11ED24FF40091421F /* WeatherCondition.swift */; };
+		B12FD2A41ED2504A0091421F /* WindDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD2A31ED2504A0091421F /* WindDirection.swift */; };
+		B12FD2A61ED250870091421F /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12FD2A51ED250870091421F /* Units.swift */; };
+		B14A78951ED0A97E00938D10 /* ForecasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A78941ED0A97E00938D10 /* ForecasterService.swift */; };
+		B1AC83A11ECBE42F009BD35B /* ForecasterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */; };
+		B1AC83A81ECBE42F009BD35B /* ForecasterSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AC839A1ECBE42F009BD35B /* ForecasterSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1AC83F21ECBE92A009BD35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC83F11ECBE92A009BD35B /* AppDelegate.swift */; };
+		B1AC83F41ECBE92A009BD35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC83F31ECBE92A009BD35B /* ViewController.swift */; };
+		B1AC83F71ECBE92A009BD35B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AC83F51ECBE92A009BD35B /* Main.storyboard */; };
+		B1AC83F91ECBE92A009BD35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AC83F81ECBE92A009BD35B /* Assets.xcassets */; };
+		B1AC83FC1ECBE92A009BD35B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1AC83FA1ECBE92A009BD35B /* LaunchScreen.storyboard */; };
+		B1AC84201ECBEA91009BD35B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC841F1ECBEA91009BD35B /* Request.swift */; };
+		B1AC84221ECBEAAD009BD35B /* RequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC84211ECBEAAD009BD35B /* RequestConfiguration.swift */; };
+		B1AC84281ECC0033009BD35B /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC84271ECC0033009BD35B /* ForecastProvider.swift */; };
+		B1AC842A1ECC01A0009BD35B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC84291ECC01A0009BD35B /* Location.swift */; };
+		B1AC842C1ECC01AC009BD35B /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC842B1ECC01AC009BD35B /* Forecast.swift */; };
+		B1AC842E1ECC03FD009BD35B /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC842D1ECC03FD009BD35B /* ModelObject.swift */; };
+		B1AC84311ECC0789009BD35B /* DarkSkyAPIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC84301ECC0789009BD35B /* DarkSkyAPIConfig.swift */; };
+		B1AC84331ECC0A6E009BD35B /* DarkSkyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC84321ECC0A6E009BD35B /* DarkSkyAPIClient.swift */; };
+		B1D6996A1ECE6B3E00CC0A83 /* DarkSkyModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D699691ECE6B3E00CC0A83 /* DarkSkyModelTest.swift */; };
+		B1D6996C1ECE6BBD00CC0A83 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6996B1ECE6BBD00CC0A83 /* FileUtils.swift */; };
+		B1D6996E1ECE6CA500CC0A83 /* darksky.json in Resources */ = {isa = PBXBuildFile; fileRef = B1D6996D1ECE6CA500CC0A83 /* darksky.json */; };
+		B1D699721ECE74DC00CC0A83 /* ForecastProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D699711ECE74DC00CC0A83 /* ForecastProviderTest.swift */; };
+		B1F037DC1ECD1AA600CE4281 /* ForecasterSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F037DB1ECD1AA600CE4281 /* ForecasterSDK.swift */; };
+		B5BCA663D3370308EB103877 /* Pods_ForecasterSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F484CCCB5F7C442DDE1A5DAD /* Pods_ForecasterSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B12FD29C1ED22C390091421F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1AC838E1ECBE42F009BD35B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1AC83961ECBE42F009BD35B;
+			remoteInfo = ForecasterSDK;
+		};
+		B1AC83A21ECBE42F009BD35B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1AC838E1ECBE42F009BD35B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1AC83961ECBE42F009BD35B;
+			remoteInfo = ForecasterSDK;
+		};
+		B1AC841D1ECBE949009BD35B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1AC838E1ECBE42F009BD35B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1AC83EE1ECBE92A009BD35B;
+			remoteInfo = ForecasterSDKTestsHost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B12FD29E1ED22C390091421F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B12FD29B1ED22C390091421F /* ForecasterSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		104B68DBDEDBE5DE2AF96EFC /* Pods-ForecasterSDKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDKTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDKTests/Pods-ForecasterSDKTests.debug.xcconfig"; sourceTree = "<group>"; };
+		245B307A7B7E38DE1C05D797 /* Pods-ForecasterSDK-ForecasterSDKTestsHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDK-ForecasterSDKTestsHost.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDK-ForecasterSDKTestsHost/Pods-ForecasterSDK-ForecasterSDKTestsHost.release.xcconfig"; sourceTree = "<group>"; };
+		39A2FBF6EB0D352DBD1C080F /* Pods_ForecasterSDKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForecasterSDKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4AD0264DBCAA35626E1A53 /* Pods-ForecasterSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDK/Pods-ForecasterSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		3E02654D9A348556CAFF242D /* Pods-ForecasterSDKTestsHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDKTestsHost.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDKTestsHost/Pods-ForecasterSDKTestsHost.release.xcconfig"; sourceTree = "<group>"; };
+		3E35DE6E8044DB507DD7AD36 /* Pods-ForecasterSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDKTests/Pods-ForecasterSDKTests.release.xcconfig"; sourceTree = "<group>"; };
+		45C96758342F1BD451199DFE /* Pods_ForecasterSDK_ForecasterSDKTestsHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForecasterSDK_ForecasterSDKTestsHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC6FED6100ABE757757B5A4 /* Pods-ForecasterSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDK/Pods-ForecasterSDK.release.xcconfig"; sourceTree = "<group>"; };
+		B12FD29F1ED22E480091421F /* DarkSkyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyModel.swift; sourceTree = "<group>"; };
+		B12FD2A11ED24FF40091421F /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		B12FD2A31ED2504A0091421F /* WindDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindDirection.swift; sourceTree = "<group>"; };
+		B12FD2A51ED250870091421F /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		B14A78941ED0A97E00938D10 /* ForecasterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterService.swift; sourceTree = "<group>"; };
+		B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForecasterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AC839A1ECBE42F009BD35B /* ForecasterSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForecasterSDK.h; sourceTree = "<group>"; };
+		B1AC839B1ECBE42F009BD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1AC83A01ECBE42F009BD35B /* ForecasterSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecasterSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AC83A71ECBE42F009BD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1AC83EF1ECBE92A009BD35B /* ForecasterSDKTestsHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForecasterSDKTestsHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1AC83F11ECBE92A009BD35B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B1AC83F31ECBE92A009BD35B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1AC83F61ECBE92A009BD35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1AC83F81ECBE92A009BD35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1AC83FB1ECBE92A009BD35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1AC83FD1ECBE92A009BD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1AC84061ECBE92A009BD35B /* ForecasterSDKTestsHostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterSDKTestsHostTests.swift; sourceTree = "<group>"; };
+		B1AC84081ECBE92A009BD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1AC84111ECBE92A009BD35B /* ForecasterSDKTestsHostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecasterSDKTestsHostUITests.swift; sourceTree = "<group>"; };
+		B1AC84131ECBE92A009BD35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1AC841F1ECBEA91009BD35B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B1AC84211ECBEAAD009BD35B /* RequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestConfiguration.swift; sourceTree = "<group>"; };
+		B1AC84251ECBF50B009BD35B /* Forecaster.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Forecaster.playground; sourceTree = "<group>"; };
+		B1AC84271ECC0033009BD35B /* ForecastProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
+		B1AC84291ECC01A0009BD35B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B1AC842B1ECC01AC009BD35B /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		B1AC842D1ECC03FD009BD35B /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
+		B1AC84301ECC0789009BD35B /* DarkSkyAPIConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyAPIConfig.swift; sourceTree = "<group>"; };
+		B1AC84321ECC0A6E009BD35B /* DarkSkyAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyAPIClient.swift; sourceTree = "<group>"; };
+		B1D699691ECE6B3E00CC0A83 /* DarkSkyModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyModelTest.swift; sourceTree = "<group>"; };
+		B1D6996B1ECE6BBD00CC0A83 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		B1D6996D1ECE6CA500CC0A83 /* darksky.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = darksky.json; sourceTree = "<group>"; };
+		B1D699711ECE74DC00CC0A83 /* ForecastProviderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastProviderTest.swift; sourceTree = "<group>"; };
+		B1F037DB1ECD1AA600CE4281 /* ForecasterSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterSDK.swift; sourceTree = "<group>"; };
+		C9E2907FF5ECC69CB08313B1 /* Pods-ForecasterSDK-ForecasterSDKTestsHost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDK-ForecasterSDKTestsHost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDK-ForecasterSDKTestsHost/Pods-ForecasterSDK-ForecasterSDKTestsHost.debug.xcconfig"; sourceTree = "<group>"; };
+		E54D6B4C07E19CB185FF31B1 /* Pods_ForecasterSDKTestsHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForecasterSDKTestsHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F484CCCB5F7C442DDE1A5DAD /* Pods_ForecasterSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForecasterSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEC6E5FDA8A2C8DF44D8E0D /* Pods-ForecasterSDKTestsHost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecasterSDKTestsHost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForecasterSDKTestsHost/Pods-ForecasterSDKTestsHost.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1AC83931ECBE42F009BD35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BCA663D3370308EB103877 /* Pods_ForecasterSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC839D1ECBE42F009BD35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC83A11ECBE42F009BD35B /* ForecasterSDK.framework in Frameworks */,
+				3DBEED6ECFA6A2E5AAA6945B /* Pods_ForecasterSDKTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC83EC1ECBE92A009BD35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F5A4AEC8F6B1EAE50DE2B6 /* Pods_ForecasterSDKTestsHost.framework in Frameworks */,
+				B12FD29A1ED22C390091421F /* ForecasterSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B3A73AC6EEC6830404811DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AD0264DBCAA35626E1A53 /* Pods-ForecasterSDK.debug.xcconfig */,
+				9AC6FED6100ABE757757B5A4 /* Pods-ForecasterSDK.release.xcconfig */,
+				C9E2907FF5ECC69CB08313B1 /* Pods-ForecasterSDK-ForecasterSDKTestsHost.debug.xcconfig */,
+				245B307A7B7E38DE1C05D797 /* Pods-ForecasterSDK-ForecasterSDKTestsHost.release.xcconfig */,
+				FDEC6E5FDA8A2C8DF44D8E0D /* Pods-ForecasterSDKTestsHost.debug.xcconfig */,
+				3E02654D9A348556CAFF242D /* Pods-ForecasterSDKTestsHost.release.xcconfig */,
+				104B68DBDEDBE5DE2AF96EFC /* Pods-ForecasterSDKTests.debug.xcconfig */,
+				3E35DE6E8044DB507DD7AD36 /* Pods-ForecasterSDKTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E9A0BBFC9E5685A8FA12DF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F484CCCB5F7C442DDE1A5DAD /* Pods_ForecasterSDK.framework */,
+				45C96758342F1BD451199DFE /* Pods_ForecasterSDK_ForecasterSDKTestsHost.framework */,
+				E54D6B4C07E19CB185FF31B1 /* Pods_ForecasterSDKTestsHost.framework */,
+				39A2FBF6EB0D352DBD1C080F /* Pods_ForecasterSDKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B14A788F1ED09E9200938D10 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B14A78941ED0A97E00938D10 /* ForecasterService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B1AC838D1ECBE42F009BD35B = {
+			isa = PBXGroup;
+			children = (
+				B1AC84251ECBF50B009BD35B /* Forecaster.playground */,
+				B1AC83991ECBE42F009BD35B /* ForecasterSDK */,
+				B1AC83A41ECBE42F009BD35B /* ForecasterSDKTests */,
+				B1AC83F01ECBE92A009BD35B /* ForecasterSDKTestsHost */,
+				B1AC84051ECBE92A009BD35B /* ForecasterSDKTestsHostTests */,
+				B1AC84101ECBE92A009BD35B /* ForecasterSDKTestsHostUITests */,
+				B1AC83981ECBE42F009BD35B /* Products */,
+				1B3A73AC6EEC6830404811DC /* Pods */,
+				5E9A0BBFC9E5685A8FA12DF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B1AC83981ECBE42F009BD35B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */,
+				B1AC83A01ECBE42F009BD35B /* ForecasterSDKTests.xctest */,
+				B1AC83EF1ECBE92A009BD35B /* ForecasterSDKTestsHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1AC83991ECBE42F009BD35B /* ForecasterSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B1F037DB1ECD1AA600CE4281 /* ForecasterSDK.swift */,
+				B1AC84231ECBF4D0009BD35B /* Models & Enums */,
+				B1AC84241ECBF4D6009BD35B /* Networking */,
+				B14A788F1ED09E9200938D10 /* Services */,
+				B1AC84261ECBFFFE009BD35B /* ForecastProvider */,
+				B1AC839A1ECBE42F009BD35B /* ForecasterSDK.h */,
+				B1AC839B1ECBE42F009BD35B /* Info.plist */,
+			);
+			path = ForecasterSDK;
+			sourceTree = "<group>";
+		};
+		B1AC83A41ECBE42F009BD35B /* ForecasterSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D699701ECE74B000CC0A83 /* Provider Tests */,
+				B1D699681ECE6B2100CC0A83 /* Model Tests */,
+				B1D6996B1ECE6BBD00CC0A83 /* FileUtils.swift */,
+				B1AC83A71ECBE42F009BD35B /* Info.plist */,
+			);
+			path = ForecasterSDKTests;
+			sourceTree = "<group>";
+		};
+		B1AC83F01ECBE92A009BD35B /* ForecasterSDKTestsHost */ = {
+			isa = PBXGroup;
+			children = (
+				B1D6996F1ECE6CA800CC0A83 /* Test Resources */,
+				B1AC83F11ECBE92A009BD35B /* AppDelegate.swift */,
+				B1AC83F31ECBE92A009BD35B /* ViewController.swift */,
+				B1AC83F51ECBE92A009BD35B /* Main.storyboard */,
+				B1AC83F81ECBE92A009BD35B /* Assets.xcassets */,
+				B1AC83FA1ECBE92A009BD35B /* LaunchScreen.storyboard */,
+				B1AC83FD1ECBE92A009BD35B /* Info.plist */,
+			);
+			path = ForecasterSDKTestsHost;
+			sourceTree = "<group>";
+		};
+		B1AC84051ECBE92A009BD35B /* ForecasterSDKTestsHostTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC84061ECBE92A009BD35B /* ForecasterSDKTestsHostTests.swift */,
+				B1AC84081ECBE92A009BD35B /* Info.plist */,
+			);
+			path = ForecasterSDKTestsHostTests;
+			sourceTree = "<group>";
+		};
+		B1AC84101ECBE92A009BD35B /* ForecasterSDKTestsHostUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC84111ECBE92A009BD35B /* ForecasterSDKTestsHostUITests.swift */,
+				B1AC84131ECBE92A009BD35B /* Info.plist */,
+			);
+			path = ForecasterSDKTestsHostUITests;
+			sourceTree = "<group>";
+		};
+		B1AC84231ECBF4D0009BD35B /* Models & Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC84291ECC01A0009BD35B /* Location.swift */,
+				B1AC842B1ECC01AC009BD35B /* Forecast.swift */,
+				B12FD2A11ED24FF40091421F /* WeatherCondition.swift */,
+				B12FD2A31ED2504A0091421F /* WindDirection.swift */,
+				B12FD2A51ED250870091421F /* Units.swift */,
+				B1AC842D1ECC03FD009BD35B /* ModelObject.swift */,
+			);
+			name = "Models & Enums";
+			sourceTree = "<group>";
+		};
+		B1AC84241ECBF4D6009BD35B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC841F1ECBEA91009BD35B /* Request.swift */,
+				B1AC84211ECBEAAD009BD35B /* RequestConfiguration.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B1AC84261ECBFFFE009BD35B /* ForecastProvider */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC84271ECC0033009BD35B /* ForecastProvider.swift */,
+				B1AC842F1ECC06E5009BD35B /* DarkSkyAPI */,
+			);
+			name = ForecastProvider;
+			sourceTree = "<group>";
+		};
+		B1AC842F1ECC06E5009BD35B /* DarkSkyAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B1AC84301ECC0789009BD35B /* DarkSkyAPIConfig.swift */,
+				B1AC84321ECC0A6E009BD35B /* DarkSkyAPIClient.swift */,
+				B12FD29F1ED22E480091421F /* DarkSkyModel.swift */,
+			);
+			name = DarkSkyAPI;
+			sourceTree = "<group>";
+		};
+		B1D699681ECE6B2100CC0A83 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D699691ECE6B3E00CC0A83 /* DarkSkyModelTest.swift */,
+			);
+			name = "Model Tests";
+			sourceTree = "<group>";
+		};
+		B1D6996F1ECE6CA800CC0A83 /* Test Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1D6996D1ECE6CA500CC0A83 /* darksky.json */,
+			);
+			name = "Test Resources";
+			sourceTree = "<group>";
+		};
+		B1D699701ECE74B000CC0A83 /* Provider Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D699711ECE74DC00CC0A83 /* ForecastProviderTest.swift */,
+			);
+			name = "Provider Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B1AC83941ECBE42F009BD35B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC83A81ECBE42F009BD35B /* ForecasterSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B1AC83961ECBE42F009BD35B /* ForecasterSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AC83AB1ECBE42F009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDK" */;
+			buildPhases = (
+				FCBAD4B3F38CDC444C4ECF92 /* [CP] Check Pods Manifest.lock */,
+				B1AC83921ECBE42F009BD35B /* Sources */,
+				B1AC83931ECBE42F009BD35B /* Frameworks */,
+				B1AC83941ECBE42F009BD35B /* Headers */,
+				B1AC83951ECBE42F009BD35B /* Resources */,
+				E4573C3D9A7490B43D79C5CF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForecasterSDK;
+			productName = ForecasterSDK;
+			productReference = B1AC83971ECBE42F009BD35B /* ForecasterSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1AC839F1ECBE42F009BD35B /* ForecasterSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AC83AE1ECBE42F009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDKTests" */;
+			buildPhases = (
+				5E01BE564C53F8B0C218C65D /* [CP] Check Pods Manifest.lock */,
+				B1AC839C1ECBE42F009BD35B /* Sources */,
+				B1AC839D1ECBE42F009BD35B /* Frameworks */,
+				B1AC839E1ECBE42F009BD35B /* Resources */,
+				4DE90BCD2BEFEB938294A9EA /* [CP] Embed Pods Frameworks */,
+				C2C52CD1B57D69C6E8EF6BD2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1AC83A31ECBE42F009BD35B /* PBXTargetDependency */,
+				B1AC841E1ECBE949009BD35B /* PBXTargetDependency */,
+			);
+			name = ForecasterSDKTests;
+			productName = ForecasterSDKTests;
+			productReference = B1AC83A01ECBE42F009BD35B /* ForecasterSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1AC83EE1ECBE92A009BD35B /* ForecasterSDKTestsHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1AC841A1ECBE92A009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDKTestsHost" */;
+			buildPhases = (
+				D9FC694AA69B4DB977B0ADC8 /* [CP] Check Pods Manifest.lock */,
+				B1AC83EB1ECBE92A009BD35B /* Sources */,
+				B1AC83EC1ECBE92A009BD35B /* Frameworks */,
+				B1AC83ED1ECBE92A009BD35B /* Resources */,
+				FEBCF293558ACF45A14CE23F /* [CP] Embed Pods Frameworks */,
+				B5A04B23ED1F5E07256D27D5 /* [CP] Copy Pods Resources */,
+				B12FD29E1ED22C390091421F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12FD29D1ED22C390091421F /* PBXTargetDependency */,
+			);
+			name = ForecasterSDKTestsHost;
+			productName = ForecasterSDKTestsHost;
+			productReference = B1AC83EF1ECBE92A009BD35B /* ForecasterSDKTestsHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1AC838E1ECBE42F009BD35B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Wagh, Animish";
+				TargetAttributes = {
+					B1AC83961ECBE42F009BD35B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = N6Q9M79BY3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					B1AC839F1ECBE42F009BD35B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = N6Q9M79BY3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B1AC83EE1ECBE92A009BD35B;
+					};
+					B1AC83EE1ECBE92A009BD35B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = N6Q9M79BY3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B1AC83911ECBE42F009BD35B /* Build configuration list for PBXProject "ForecasterSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1AC838D1ECBE42F009BD35B;
+			productRefGroup = B1AC83981ECBE42F009BD35B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1AC83961ECBE42F009BD35B /* ForecasterSDK */,
+				B1AC839F1ECBE42F009BD35B /* ForecasterSDKTests */,
+				B1AC83EE1ECBE92A009BD35B /* ForecasterSDKTestsHost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1AC83951ECBE42F009BD35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC839E1ECBE42F009BD35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC83ED1ECBE92A009BD35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC83FC1ECBE92A009BD35B /* LaunchScreen.storyboard in Resources */,
+				B1D6996E1ECE6CA500CC0A83 /* darksky.json in Resources */,
+				B1AC83F91ECBE92A009BD35B /* Assets.xcassets in Resources */,
+				B1AC83F71ECBE92A009BD35B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DE90BCD2BEFEB938294A9EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForecasterSDKTests/Pods-ForecasterSDKTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E01BE564C53F8B0C218C65D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5A04B23ED1F5E07256D27D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForecasterSDKTestsHost/Pods-ForecasterSDKTestsHost-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2C52CD1B57D69C6E8EF6BD2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForecasterSDKTests/Pods-ForecasterSDKTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9FC694AA69B4DB977B0ADC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4573C3D9A7490B43D79C5CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForecasterSDK/Pods-ForecasterSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCBAD4B3F38CDC444C4ECF92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEBCF293558ACF45A14CE23F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ForecasterSDKTestsHost/Pods-ForecasterSDKTestsHost-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1AC83921ECBE42F009BD35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC84281ECC0033009BD35B /* ForecastProvider.swift in Sources */,
+				B1AC84331ECC0A6E009BD35B /* DarkSkyAPIClient.swift in Sources */,
+				B1AC84201ECBEA91009BD35B /* Request.swift in Sources */,
+				B12FD2A61ED250870091421F /* Units.swift in Sources */,
+				B12FD2A41ED2504A0091421F /* WindDirection.swift in Sources */,
+				B14A78951ED0A97E00938D10 /* ForecasterService.swift in Sources */,
+				B12FD2A21ED24FF40091421F /* WeatherCondition.swift in Sources */,
+				B1AC842A1ECC01A0009BD35B /* Location.swift in Sources */,
+				B1AC84221ECBEAAD009BD35B /* RequestConfiguration.swift in Sources */,
+				B1AC84311ECC0789009BD35B /* DarkSkyAPIConfig.swift in Sources */,
+				B12FD2A01ED22E480091421F /* DarkSkyModel.swift in Sources */,
+				B1F037DC1ECD1AA600CE4281 /* ForecasterSDK.swift in Sources */,
+				B1AC842E1ECC03FD009BD35B /* ModelObject.swift in Sources */,
+				B1AC842C1ECC01AC009BD35B /* Forecast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC839C1ECBE42F009BD35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D6996C1ECE6BBD00CC0A83 /* FileUtils.swift in Sources */,
+				B1D6996A1ECE6B3E00CC0A83 /* DarkSkyModelTest.swift in Sources */,
+				B1D699721ECE74DC00CC0A83 /* ForecastProviderTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1AC83EB1ECBE92A009BD35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1AC83F41ECBE92A009BD35B /* ViewController.swift in Sources */,
+				B1AC83F21ECBE92A009BD35B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B12FD29D1ED22C390091421F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1AC83961ECBE42F009BD35B /* ForecasterSDK */;
+			targetProxy = B12FD29C1ED22C390091421F /* PBXContainerItemProxy */;
+		};
+		B1AC83A31ECBE42F009BD35B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1AC83961ECBE42F009BD35B /* ForecasterSDK */;
+			targetProxy = B1AC83A21ECBE42F009BD35B /* PBXContainerItemProxy */;
+		};
+		B1AC841E1ECBE949009BD35B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1AC83EE1ECBE92A009BD35B /* ForecasterSDKTestsHost */;
+			targetProxy = B1AC841D1ECBE949009BD35B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1AC83F51ECBE92A009BD35B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1AC83F61ECBE92A009BD35B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1AC83FA1ECBE92A009BD35B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1AC83FB1ECBE92A009BD35B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1AC83A91ECBE42F009BD35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1AC83AA1ECBE42F009BD35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1AC83AC1ECBE42F009BD35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A4AD0264DBCAA35626E1A53 /* Pods-ForecasterSDK.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ForecasterSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B1AC83AD1ECBE42F009BD35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC6FED6100ABE757757B5A4 /* Pods-ForecasterSDK.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ForecasterSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B1AC83AF1ECBE42F009BD35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104B68DBDEDBE5DE2AF96EFC /* Pods-ForecasterSDKTests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				INFOPLIST_FILE = ForecasterSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForecasterSDKTestsHost.app/ForecasterSDKTestsHost";
+			};
+			name = Debug;
+		};
+		B1AC83B01ECBE42F009BD35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E35DE6E8044DB507DD7AD36 /* Pods-ForecasterSDKTests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				INFOPLIST_FILE = ForecasterSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ForecasterSDKTestsHost.app/ForecasterSDKTestsHost";
+			};
+			name = Release;
+		};
+		B1AC84141ECBE92A009BD35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEC6E5FDA8A2C8DF44D8E0D /* Pods-ForecasterSDKTestsHost.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				INFOPLIST_FILE = ForecasterSDKTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDKTestsHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B1AC84151ECBE92A009BD35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E02654D9A348556CAFF242D /* Pods-ForecasterSDKTestsHost.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N6Q9M79BY3;
+				INFOPLIST_FILE = ForecasterSDKTestsHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.forecaster.ForecasterSDKTestsHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1AC83911ECBE42F009BD35B /* Build configuration list for PBXProject "ForecasterSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AC83A91ECBE42F009BD35B /* Debug */,
+				B1AC83AA1ECBE42F009BD35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AC83AB1ECBE42F009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AC83AC1ECBE42F009BD35B /* Debug */,
+				B1AC83AD1ECBE42F009BD35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AC83AE1ECBE42F009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AC83AF1ECBE42F009BD35B /* Debug */,
+				B1AC83B01ECBE42F009BD35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1AC841A1ECBE92A009BD35B /* Build configuration list for PBXNativeTarget "ForecasterSDKTestsHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1AC84141ECBE92A009BD35B /* Debug */,
+				B1AC84151ECBE92A009BD35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1AC838E1ECBE42F009BD35B /* Project object */;
+}
