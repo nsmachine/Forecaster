@@ -46,7 +46,7 @@ class AddLocationViewModel: NSObject, MKLocalSearchCompleterDelegate {
             return
         }
         
-        guard query.characters.count > 0
+        guard query.count > 0
             else {
                 currentQuery = ""
                 searchPublisher.onNext([])

@@ -35,7 +35,7 @@ class LocationViewController: UIViewController {
         tableView?.tableFooterView = footerView
         
         locations = viewModel.loadLocations()
-        token = locations?.addNotificationBlock({ [unowned self] (changes) in
+        token = locations?.observe({ [unowned self] (changes) in
             
             switch changes {
                 
@@ -83,7 +83,7 @@ class LocationViewController: UIViewController {
         }
     }
     
-    func willEnterForeground(notification: Notification) {
+    @objc func willEnterForeground(notification: Notification) {
         viewModel.updateForecast()
     }
     

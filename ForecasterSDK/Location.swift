@@ -14,26 +14,26 @@ import SwiftyJSON
 
 public class Location: Object, ModelObject {
     
-    public private(set) dynamic var identifier = ""
+    @objc public private(set) dynamic var identifier = ""
     
-    public internal(set) dynamic var name: String = ""
-    public internal(set) dynamic var locality: String = ""
-    public internal(set) dynamic var subLocality: String = ""
-    public internal(set) dynamic var administrativeArea: String = ""
-    public internal(set) dynamic var subAdministrativeArea: String = ""
-    public internal(set) dynamic var country: String = ""
-    public internal(set) dynamic var isoCountryCode: String = ""
+    @objc public internal(set) dynamic var name: String = ""
+    @objc public internal(set) dynamic var locality: String = ""
+    @objc public internal(set) dynamic var subLocality: String = ""
+    @objc public internal(set) dynamic var administrativeArea: String = ""
+    @objc public internal(set) dynamic var subAdministrativeArea: String = ""
+    @objc public internal(set) dynamic var country: String = ""
+    @objc public internal(set) dynamic var isoCountryCode: String = ""
     
-    public internal(set) dynamic var latitude: Double = 0.0
-    public internal(set) dynamic var longitude: Double = 0.0
-    public internal(set) dynamic var radius: Double = 0.0
+    @objc public internal(set) dynamic var latitude: Double = 0.0
+    @objc public internal(set) dynamic var longitude: Double = 0.0
+    @objc public internal(set) dynamic var radius: Double = 0.0
     
-    public internal(set) dynamic var timeZone: String = ""
+    @objc public internal(set) dynamic var timeZone: String = ""
     
-    public internal(set) dynamic var creationTimestamp: Double = 0.0
-    public internal(set) dynamic var lastUpdateTimestamp: Double = 0.0
+    @objc public internal(set) dynamic var creationTimestamp: Double = 0.0
+    @objc public internal(set) dynamic var lastUpdateTimestamp: Double = 0.0
     
-    public internal(set) dynamic var currently: Forecast?
+    @objc public internal(set) dynamic var currently: Forecast?
     
     public internal(set) var hourly   = List<Forecast>()
     public internal(set) var daily    = List<Forecast>()

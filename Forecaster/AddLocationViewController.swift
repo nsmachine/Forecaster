@@ -36,7 +36,7 @@ class AddLocationViewController: UIViewController {
             self.results = publishedValue
             self.tableView?.reloadData()
             
-        }).addDisposableTo(disposeBag)
+        }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {

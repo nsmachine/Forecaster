@@ -11,10 +11,10 @@ import Alamofire
 
 public enum RequestStatus: String, CustomStringConvertible {
     
-    case NotStarted         = "Not Started"
-    case Running            = "Running"
-    case Cancelled          = "Cancelled"
-    case Completed          = "Completed"
+    case notStarted         = "Not Started"
+    case running            = "Running"
+    case cancelled          = "Cancelled"
+    case completed          = "Completed"
     
     public var description: String { return self.rawValue }
 }
@@ -27,7 +27,7 @@ class Request {
     
     let config: RequestConfiguration
     
-    private(set) var status: RequestStatus = .NotStarted
+    private(set) var status: RequestStatus = .notStarted
     private(set) var request: Alamofire.DataRequest?
     
     private var completion: RequestCompletion?
@@ -49,13 +49,13 @@ class Request {
     func start() {
         
         switch status {
-        case .NotStarted:
+        case .notStarted:
             break
         default:
             return
         }
         
-        status = .Running
+        status = .running
         
         Request.requests[id] = self
         
@@ -64,9 +64,9 @@ class Request {
             
             guard let strongSelf = self else { return }
             
-            guard strongSelf.status != .Cancelled else { return }
+            guard strongSelf.status != .cancelled else { return }
             
-            strongSelf.status = .Completed
+            strongSelf.status = .completed
             
             strongSelf.completion?(response.result.value, response.result.error)
             
@@ -79,13 +79,13 @@ class Request {
     func cancel() {
         
         switch status {
-        case .Running:
+        case .running:
             break
         default:
             return
         }
         
-        status = .Cancelled
+        status = .cancelled
         request?.cancel()
         completion = nil
         
@@ -99,11 +99,7 @@ extension Request {
     
     fileprivate static var sessionManager: Alamofire.SessionManager {
         
-        if UIApplication.shared.applicationState == .background {
-            return backgroundSessionManager
-        } else {
-            return foregroundSessionManager
-        }
+        return foregroundSessionManager
     }
     
     fileprivate static var backgroundSessionManager: Alamofire.SessionManager = {() -> Alamofire.SessionManager in
